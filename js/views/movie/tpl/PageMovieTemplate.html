@@ -1,0 +1,42 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<i class="fa fa-search"></i>
+			Movie Search
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div id="messages_div"></div>
+		<form id="formMovieFilter">
+			<div class="widget-main ">
+				<div class="row pad-hor">
+					<div class="col-xs-6">
+						<a href="#app/newMovie" class="btn btn-info">
+							<i class="fa fa-plus-circle"></i>
+							Create a new Movie
+						</a>
+						&nbsp;
+						<a href="javascript:void(0)" class="btn btn-default reset-button">Clear</a>
+					</div>
+					<div class="col-sm-6">
+						<div class="input-group">
+							<input id="inputTitle" type="text" class="clearable form-control search-query" placeholder="Search movie">
+							<span id="query" class="input-group-btn ">
+								<button type="button" class="btn btn-default search-button loading-button" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Pesquisando...">
+									<span class="fa fa-search icon-on-right  "></span>
+									Search
+								</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+
+		<div class="panel bord-no pad-top">
+			<div class="panel-body bord-no">
+				<div class="grid-movies "></div>
+			</div>
+		</div>
+	</div>
+</div>

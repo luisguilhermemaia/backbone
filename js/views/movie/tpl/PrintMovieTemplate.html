@@ -1,0 +1,47 @@
+<div class="panel">
+	<div class="panel-heading">
+		<h3 class="panel-title">
+			<i class="fa fa-film"></i>
+			Movie Detail
+		</h3>
+	</div>
+	<div class="panel-body">
+		<div class="media mar-btm">
+			<div class="media-left">
+				<img class="imglg " src="{{poster}}" alt="Image" height="550">
+			</div>
+			<div class="media-body">
+				<p class="text-3x text-main text-bold ">
+					{{title}}
+					<small> ({{year}}) </small>
+				</p>
+				<p class="text-lg text-main text-semibold ">
+					Release on {{releaseDate}} |
+					<i>{{genre}}</i>
+				</p>
+				<p class="text-lg text-main text-2x ">Plot</p>
+
+				<p>{{plot}}</p>
+				<br>
+				<p class="text-lg text-main text-2x ">Cast</p>
+				<p>No Info</p>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div class="clearfix form-actions">
+			<a href="##app/editMovie/{{id}}" class="btn   btn-lg button-saving" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Salvando...">
+				<i class="save fa fa-pencil "></i>
+				Edit
+			</a>
+
+			&nbsp; &nbsp;
+			<a href="#app/movies" class="go-back-link btn-lg btn btn-light">
+				<i class=" fa fa-undo "></i>
+				Go Back to list
+			</a>
+		</div>
+	</div>
+
+</div>

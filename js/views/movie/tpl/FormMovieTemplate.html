@@ -1,0 +1,79 @@
+<div class="panel">
+	<!--Panel heading-->
+	<div class="panel-heading">
+		<h3 class="panel-title">Form Movie</h3>
+	</div>
+	<!--Panel body-->
+	<div class="panel-body">
+		<div class="panel">
+			<div class="panel-body">
+				<div id="messages_div"></div>
+
+				<form role="form" id="formMovie">
+					<input type="hidden" id="inputId" value="{{id}}">
+					<div id="groupInputPoster" class="form-group  text-center " style:"cursor:pointer;">
+						<img id="imageView" height="200" src="{{ poster || 'images/no_image.png' }}" alt="" style:"cursor:pointer;">
+						<input type="" id="inputPoster" placeholder="" value="{{poster}}" class="form-control " style="display: none;">
+						<input id='inputUploadImage' type="file" name="files[]" style="display: none; cursor: pointer;">
+					</div>
+
+					<div id="groupInputTitle" class="form-group   ">
+						<label class="control-label" for="inputTitle">Title *</label>
+						<input type="text" id="inputTitle" placeholder="" data-validation="required" value="{{title}}" class="form-control  " maxlength="255">
+					</div>
+					<div id="groupInputPlot" class="form-group   ">
+						<label class="control-label" for="inputPlot">Plot </label>
+						<textarea rows="3" id="inputPlot" placeholder="Plot" value="{{plot}}" class="form-control " maxlength="2000">{{plot}}</textarea>
+					</div>
+
+					<div id="groupInputType" class="form-group   ">
+						<label class="control-label" for="inputType">Type </label>
+						<select type="text" id="inputType" placeholder="" value="{{type}}" class="form-control  " maxlength="255">
+							<option value=''>-- CHOOSE --</option>
+							<option value='Film' {{type !=null && type=='Film'?'selected' :''}}>Film</option>
+							<option value='Series' {{type !=null && type=='Series'?'selected' :''}}>Series</option>
+						</select>
+					</div>
+					<div class="row">
+						<div id="groupInputReleaseDateContainer" class="form-group   col-xs-3">
+							<label class="control-label" for="inputReleaseDate">Release date </label>
+							<div id="groupInputReleaseDate" class="input-group">
+								<input id="inputReleaseDate" placeholder="Escolha ou digite uma data." type="text" class="form-control append-left" value="{{releaseDate}}" data-date-format="DD/MM/YYYY" />
+								<div class="input-group-addon	append-right">
+									<span class="fa fa-calendar"></span>
+								</div>
+							</div>
+						</div>
+						<div id="groupInputGenre" class="form-group  col-xs-3 ">
+							<label class="control-label" for="inputGenre">Genre </label>
+							<input type="text" id="inputGenre" placeholder="" value="{{genre}}" class="form-control  " maxlength="255">
+						</div>
+						<div id="groupInputBudget" class="form-group col-xs-3  ">
+							<label class="control-label" for="inputBudget">Budget ($)</label>
+							<input type="text" id="inputBudget" placeholder="" value="{{budget}}" class="form-control  " maxlength="10">
+						</div>
+						<div id="groupInputYear" class="form-group   col-xs-3  ">
+							<label class="control-label" for="inputYear">Year </label>
+							<input type="text" id="inputYear" placeholder="" value="{{year}}" class="form-control  " maxlength="10">
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+		<div>
+			<div class="clearfix form-actions">
+				<a href="javascript:void(-1)" id="save" class="save btn btn-primary  btn-lg button-saving" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Salvando...">
+					<i class="save fa fa-check "></i>
+					Save
+				</a>
+
+				&nbsp; &nbsp;
+				<a href="#app/movies" class="go-back-link btn-lg btn btn-light">
+					<i class=" fa fa-undo "></i>
+					Go Back to list
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
